@@ -3,7 +3,15 @@ import './App.css';
 const App = ()=>{
   return (
     <>
-    <p>problemas al hacer pull</p>
+    	<div className='app'>
+    		navbar
+    		section (
+    			-intro
+    		  -portfolio 
+    		  -work 
+    		  -contact
+    		  ) 
+    	</div>
     </>
   );
 };
