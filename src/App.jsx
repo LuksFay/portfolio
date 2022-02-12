@@ -3,7 +3,7 @@ import './App.css';
 const App = ()=>{
   return (
     <>
-    <p>hola</p>
+    <p>problemas al hacer pull</p>
     </>
   );
 };
