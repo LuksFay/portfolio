@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import Navbar from './components/navbar/Navbar';
 import Intro from './components/intro/Intro';
 import Portfolio from './components/portfolio/Portfolio';
@@ -19,12 +19,6 @@ const App = ()=>{
     		<Contact />
     			
     		</div>
-    		section (
-    			-intro
-    		  -portfolio 
-    		  -work 
-    		  -contact
-    		  ) 
     	</div>
     </>
   );
