@@ -1,10 +1,11 @@
 import './App.css';
+import Navbar from './components/navbar/Navbar';
 
 const App = ()=>{
   return (
     <>
     	<div className='app'>
-    		navbar
+    		<Navbar />
     		section (
     			-intro
     		  -portfolio 
