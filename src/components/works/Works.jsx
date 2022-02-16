@@ -8,4 +8,4 @@ const Works = () => {
 	);
 };
 
-export {Works};
+export default Works;

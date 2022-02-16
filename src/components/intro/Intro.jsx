@@ -8,4 +8,4 @@ const Intro = () => {
 	);
 };
 
-export {Intro};
+export default Intro;
