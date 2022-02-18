@@ -14,6 +14,10 @@
 		position: relative;
 		top: 70px;
 		scroll-snap-type: y mandatory;
+		scrollbar-width: none; // for firefox
+		&::-webkit-scrollbar{
+			display: none; // for chrome & safari
+		}
 		
 		> *{
 			width: 100vw;

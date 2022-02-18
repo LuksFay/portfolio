@@ -3,8 +3,15 @@ import './navbar.scss';
 const Navbar = () => {
 	return(
 		<>
-			<div className='navbar'>  </div>
-			<ul></ul>
+			<div className='navbar'> 
+				<div className='wrapper'>
+					<div className='left'>
+						<a href='#intro'>intro</a>
+					</div>
+					
+					<div className='right'></div>
+				</div>
+			</div>
 		</>
 	);
 };
