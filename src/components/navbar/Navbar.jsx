@@ -1,6 +1,6 @@
 import './navbar.scss';
 import {fab} from '@fortawesome/free-brands-svg-icons';
-import {FontAwesomeIcon} from '@react-fontawesome';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 library.add(fab);
 
