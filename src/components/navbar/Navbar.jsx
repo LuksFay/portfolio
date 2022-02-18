@@ -20,7 +20,8 @@ const Navbar = () => {
 						
 						<div className='itemContainer'>
 							<p className='icon'>Logo</p>
-							<FontAwesomeIcon icon='fa-github' /> 
+							<FontAwesomeIcon icon='github' />
+							<FontAwesomeIcon icon='fa-brands fa-github' /> 
 							<button className='github-button'> Check out my Github!</button>	
 						</div>
 						
