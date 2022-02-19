@@ -19,17 +19,17 @@ const Navbar = () => {
 						</a>
 						
 						<div className='itemContainer'>
-							<p className='icon'>Logo</p>
-							<FontAwesomeIcon icon='github' />
-							<FontAwesomeIcon icon='fa-brands fa-github' /> 
-							<button className='github-button'> Check out my Github!</button>	
+							<button className='github-button'>
+								<FontAwesomeIcon icon='fa-brands fa-github' /> 
+						 		Check out my Github!
+							</button>	
 						</div>
 						
 						<div className='itemContainer'>
-							<p className='icon'>Logo</p>
-							<FontAwesomeIcon icon='twitter' />
-							<FontAwesomeIcon icon='fa-brands fa-twitter' /> 
-							<button className='twitter-button'>Here's my Twitter, follow me!</button>	
+							<button className='twitter-button'>
+								<FontAwesomeIcon icon='fa-brands fa-twitter' /> 
+								Here's my Twitter, follow me!
+							</button>	
 						</div>
 						
 					</div>
