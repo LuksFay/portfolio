@@ -31,14 +31,24 @@
 						display: flex;
 						align-items: center;
 						margin-left: 30px;
+						margin-right: 5px;
 						
 							.icon{
 								font-size: 18px;
 								margin-right: 5px;
+								color: #fafbfc
 							}
 							.span{
 								font-size: 15px;
 								font-weight: 400;
+							}
+							.github-button{
+							background-color: #2b3137;
+							color: #fafbfc;
+							}
+							.twitter-button{
+							background-color: #00acee;
+							color: #fafbfc;
 							}
 					}
 				}
