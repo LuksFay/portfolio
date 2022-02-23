@@ -5,13 +5,15 @@ import Portfolio from './components/portfolio/Portfolio';
 import Works from './components/works/Works';
 import Testimonials from './components/testimonials/Testimonials';
 import Contact from './components/contact/Contact';
+import {useState} from 'react';
 
 
 const App = ()=>{
+	const [menuOpen, setMenuOpen] = useState(false)
   return (
     <>
     	<div className='app'>
-    		<Navbar />
+    		<Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
     		<div className='sections'>
     		<Intro />
     		<Portfolio />

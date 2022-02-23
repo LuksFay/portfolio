@@ -5,10 +5,10 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 library.add(fab);
 
-const Navbar = () => {
+const Navbar = ({menuOpen, setMenuOpen}) => {
 	return(
 		<>
-			<div className='navbar'> 
+			<div className={'navbar ' + (menuOpen && 'active')}> 
 			
 				<div className='wrapper'>
 				
@@ -31,7 +31,11 @@ const Navbar = () => {
 					</div>
 					
 					<div className='right'>
-					
+						<div className='hamburguer' onClick={() => setMenuOpen(!menuOpen)}>
+							<span className='line1'></span>
+							<span className='line2'></span>
+							<span className='line3'></span>	
+						</div>
 					</div>
 					
 				</div>
