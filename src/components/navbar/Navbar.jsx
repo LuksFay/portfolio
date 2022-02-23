@@ -18,18 +18,14 @@ const Navbar = () => {
 							Portfolio.
 						</a>
 						
-						<div className='itemContainer'>
-							<button className='github-button'>
+						<div className='itemContainer github-button'>
 								<FontAwesomeIcon icon='fa-brands fa-github icon' /> 
 						 		<span>Check out my Github!</span>
-							</button>	
 						</div>
 						
-						<div className='itemContainer'>
-							<button className='twitter-button'>
+						<div className='itemContainer twitter-button'>
 								<FontAwesomeIcon icon='fa-brands fa-twitter icon' /> 
 								<span>Here's my Twitter, follow me!</span>
-							</button>	
 						</div>
 						
 					</div>
