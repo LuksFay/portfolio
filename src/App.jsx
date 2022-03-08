@@ -5,6 +5,7 @@ import Portfolio from './components/portfolio/Portfolio';
 import Works from './components/works/Works';
 import Testimonials from './components/testimonials/Testimonials';
 import Contact from './components/contact/Contact';
+import Menu from './components/menu/Menu';
 import {useState} from 'react';
 
 
@@ -13,15 +14,18 @@ const App = ()=>{
   return (
     <>
     	<div className='app'>
+    		
     		<Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+    		<Menu />
+    		
     		<div className='sections'>
-    		<Intro />
-    		<Portfolio />
-    		<Works/>
-    		<Testimonials/>
-    		<Contact />
-    			
+    			<Intro />
+    			<Portfolio />
+    			<Works/>
+    			<Testimonials/>
+    			<Contact />
     		</div>
+    		
     	</div>
     </>
   );
