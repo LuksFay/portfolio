@@ -1,5 +1,7 @@
 import {useState} from 'react';
-import './portfolio.scss'
+import './portfolio.scss';
+import PortfolioList from './components/portfolioList/PortfolioList';
+
 
 const Portfolio = () => {
 
