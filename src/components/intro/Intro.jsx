@@ -8,7 +8,9 @@ const Intro = () => {
 
 	useEffect(()=>{
 		init(textRef.current, {
-		showCursor: false,
+		showCursor: true,
+		backDelay: 1500,
+		backSpeed: 60
 		strings: ['JavaScript Developer', 'Crypto blogger', 'Smart Contract Developer'],
 		});
 	},[])

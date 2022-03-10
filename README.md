@@ -6,6 +6,6 @@ Developtment phase ⚙️
 
 # Current sub-phase
 Nav-bar ✅️
-About me 📍️
-My works
+About me (have to change my profile pic.) ☑️
+My works 📍️
 How to contact me
