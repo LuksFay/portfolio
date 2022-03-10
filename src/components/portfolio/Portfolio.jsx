@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import './portfolio.scss';
-import PortfolioList from './portfolioList/PortfolioList';
+import PortfolioList from '../portfolioList/PortfolioList';
 
 
 const Portfolio = () => {
