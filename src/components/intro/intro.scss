@@ -1,3 +1,17 @@
 .intro{
-	background-color: pink;
+	background-color: #fff;
+	display: flex;
+	
+	.left{
+		flex: 0.5;
+		
+		.imgContainer{
+			width: 700px;
+			height: 700px;
+		}
+	}
+	.right{
+		flex: 0.5;
+		background-color: red;
+	}
 }
