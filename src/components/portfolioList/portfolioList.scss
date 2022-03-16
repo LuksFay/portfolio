@@ -5,7 +5,8 @@
 	margin-right: 50px;
 	padding: 0.7px;
 	border-radius: 10px;
-	cursor: pointer;	
+	cursor: pointer;
+	color: #000;	
 		
 	&.active{
 		background-color: $mainColor;
