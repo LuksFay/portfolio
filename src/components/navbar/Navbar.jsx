@@ -18,19 +18,18 @@ const Navbar = ({menuOpen, setMenuOpen}) => {
 							Portfolio.
 						</a>
 						
-						<div className='itemContainer github-button'>
-								<a href='https://github.com/LuksFay'>
-									<FontAwesomeIcon icon='fa-brands fa-github icon' className='icon' /> 
-						 			<span className='span'>Check out my Github!</span>
-								</a>
-						</div>
-						
-						<div className='itemContainer twitter-button'>
-								<a href='https://twitter.com/LuksfayDev'>
-									<FontAwesomeIcon icon='fa-brands fa-twitter icon' className='icon'/> 
-									<span className='span' >Here's my Twitter, follow me!</span>
-								</a>
-						</div>
+						<a href='https://github.com/LuksFay' className='buttons'>
+							<div className='itemContainer github-button'>
+								<FontAwesomeIcon icon='fa-brands fa-github icon' className='icon' /> 
+						 		<span className='span'>Check out my Github!</span>
+							</div>
+						</a>
+						<a href='https://twitter.com/LuksfayDev' className='buttons'>
+							<div className='itemContainer twitter-button'>	
+								<FontAwesomeIcon icon='fa-brands fa-twitter icon' className='icon'/> 
+								<span className='span' >Here's my Twitter, follow me!</span>
+							</div>
+						</a>
 						
 					</div>
 					
