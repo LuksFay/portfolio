@@ -4,7 +4,7 @@ const Menu = ({menuOpen, setMenuOpen}) => {
 	return(
 		<>
 			<div className={'menu '+(menuOpen && 'active')}>
-				<ul className=''>
+				<ul className='ul'>
 				
 					<li onClick={()=>setMenuOpen(false)}>
 						<a href='#intro'>Home</a>
