@@ -27,37 +27,41 @@
 						color: inherit;
 						margin-right: 40px;
 					}
-					
-					.itemContainer{
-						display: flex;
-						align-items: center;
-						justify-content: space-between;
-						margin-left: 30px;
-						margin-right: 5px;
-						padding: 10px;
-						border-radius: 15px;
+					.buttons{
+						text-decoration: none;
+						.itemContainer{
+							display: flex;
+							align-items: center;
+							justify-content: space-between;
+							margin-left: 30px;
+							margin-right: 5px;
+							padding: 10px;
+							border-radius: 15px;
 						
 						
-							.icon{
-								font-size: 18px;
-								color: #fafbfc
+								.icon{
+									font-size: 18px;
+									color: #fafbfc
+								}
+								.span{
+									margin-left: 5px;
+									font-size: 15px;
+									font-weight: 400;
+								}
+							.github-button{
+								background-color: #2b3137;
+								color: #fafbfc;
 							}
-							.span{
-								margin-left: 5px;
-								font-size: 15px;
-								font-weight: 400;
+							.twitter-button{
+								background-color: #00acee;
+								color: #fafbfc;
 							}
+						}
 					}
 					
-					.github-button{
-						background-color: #2b3137;
-						color: #fafbfc;
-						
-					}
-					.twitter-button{
-						background-color: #00acee;
-						color: #fafbfc;
-					}
+					
+					
+					
 				}
 				
 				.right{
