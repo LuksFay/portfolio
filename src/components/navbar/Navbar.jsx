@@ -24,8 +24,8 @@ const Navbar = ({menuOpen, setMenuOpen}) => {
 						</div>
 						
 						<div className='itemContainer twitter-button'>
-								<FontAwesomeIcon icon='fa-brands fa-twitter icon' /> 
-								<span>Here's my Twitter, follow me!</span>
+								<FontAwesomeIcon icon='fa-brands fa-twitter icon' className='icon'/> 
+								<span className='span' >Here's my Twitter, follow me!</span>
 						</div>
 						
 					</div>
