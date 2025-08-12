@@ -1,48 +1,51 @@
+// main.js
 import Header from './components/Header.js';
 import Perfil from './components/Perfil.js';
-import Experiencia from './components/Experiencia.js';
 import Desarrollo from './components/Desarrollo.js';
 import Educacion from './components/Educacion.js';
-import Certificaciones from './components/Certificaciones.js';
 import Idiomas from './components/Idiomas.js';
+import { translations } from './translations.js';
 
 const app = document.getElementById('app');
 
-// Agrego header y perfil como siempre
-app.appendChild(Header());
-app.appendChild(Perfil());
+// Estado simple
+let lang = localStorage.getItem('lang') || 'es';
 
-// Contenedor de pestañas
-const tabsContainer = document.createElement('div');
-tabsContainer.innerHTML = `
-  <div class="tabs">
-    <button id="btn-exp">Experiencia laboral</button>
-    <button id="btn-dev">Desarrollo web</button>
-  </div>
-  <div id="tab-content"></div>
-`;
-app.appendChild(tabsContainer);
+// Contenedor donde renderizamos todo
+function renderApp() {
+  app.innerHTML = '';
 
-// Referencias a botones y contenedor
-const btnExp = tabsContainer.querySelector('#btn-exp');
-const btnDev = tabsContainer.querySelector('#btn-dev');
-const tabContent = tabsContainer.querySelector('#tab-content');
+  // LANG SELECTOR
+  const langWrapper = document.createElement('div');
+  langWrapper.className = 'lang-select';
+  const label = document.createElement('div');
+  label.textContent = '';
+  label.style.marginRight = '6px';
+  langWrapper.appendChild(label);
 
-// Función para limpiar y cargar contenido
-function mostrarSeccion(seccion) {
-  tabContent.innerHTML = ''; // Limpiar
-  if (seccion === 'exp') tabContent.appendChild(Experiencia());
-  if (seccion === 'dev') tabContent.appendChild(Desarrollo());
+  ['es','pt','en'].forEach(code => {
+    const btn = document.createElement('button');
+    btn.textContent = code.toUpperCase();
+    btn.className = (code === lang) ? 'active' : '';
+    btn.addEventListener('click', () => {
+      if (lang === code) return;
+      lang = code;
+      localStorage.setItem('lang', lang);
+      renderApp(); // re-render
+    });
+    langWrapper.appendChild(btn);
+  });
+
+  app.appendChild(langWrapper);
+
+  // Header + sections
+  app.appendChild(Header(translations[lang].header));
+  app.appendChild(Perfil(translations[lang].perfil));
+  app.appendChild(Desarrollo(translations[lang].desarrollo));
+  app.appendChild(Educacion(translations[lang].educacion));
+  
+  app.appendChild(Idiomas(translations[lang].idiomas));
 }
 
-// Eventos de los botones
-btnExp.addEventListener('click', () => mostrarSeccion('exp'));
-btnDev.addEventListener('click', () => mostrarSeccion('dev'));
-
-// Mostrar primero "Experiencia"
-mostrarSeccion('exp');
-
-// Luego, continúan las otras secciones normalmente
-app.appendChild(Educacion());
-app.appendChild(Certificaciones());
-app.appendChild(Idiomas());
+// inicial
+renderApp();

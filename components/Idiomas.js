@@ -1,11 +1,18 @@
-export default function Idiomas() {
+export default function Idiomas(data = {}) {
+  // data: { titulo, items: [] }
   const section = document.createElement('section');
-  section.innerHTML = `
-    <h2>Idiomas</h2>
-    <ul>
-      <li>Portugués – Avanzado (C1)</li>
-      <li>Inglés – Intermedio (B1)</li>
-    </ul>
-  `;
+  const items = Array.isArray(data.items) ? data.items : [];
+  section.innerHTML = `<h2>${data.titulo || 'Idiomas'}</h2>`;
+
+  if (items.length) {
+    const ul = document.createElement('ul');
+    items.forEach(it => {
+      const li = document.createElement('li');
+      li.textContent = it;
+      ul.appendChild(li);
+    });
+    section.appendChild(ul);
+  }
+
   return section;
 }

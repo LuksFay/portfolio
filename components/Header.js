@@ -1,12 +1,18 @@
-export default function Header() {
+export default function Header(data = {}) {
+  // data: { name, location, contact, linkedin }
   const header = document.createElement('header');
+
   header.innerHTML = `
-    <div>
-      <h1>Fernando Lucas Picco</h1>
-      <div class="info">Rosario, Santa Fe, Argentina</div>
-      <div class="info">luksfaydev@gmail.com | <a href="https://www.linkedin.com/in/luksfay" target="_blank">LinkedIn</a></div>
+    <div class="left">
+      <h1>${data.name || 'Nombre Apellido'}</h1>
+      <div class="info">${data.location || ''}</div>
+      <div class="info">
+        ${data.contact ? `${data.contact} | ` : ''}
+        ${data.linkedin ? `<a href="${data.linkedin}" target="_blank" rel="noopener">LinkedIn</a>` : ''}
+      </div>
     </div>
-    <img src="https://images.app.goo.gl/ELX9x2UgMuahUbJz7" alt="Foto de perfil" class="foto">
+    <img src="assets/foto.jpg" alt="Foto de perfil" class="foto">
   `;
+
   return header;
 }

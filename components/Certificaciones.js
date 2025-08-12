@@ -1,9 +1,18 @@
-export default function Certificaciones() {
+export default function Certificaciones(data = {}) {
+  // data: { titulo, items: [] }
   const section = document.createElement('section');
-  section.innerHTML = `
-    <h2>Certificaciones</h2>
-    <p><strong>Manipulación Segura de Alimentos</strong> – Ministerio de Agricultura <span class="fecha">(2020 – 2022)</span></p>
-    <p><strong>Barista Inicial</strong> – Arto Café, Rosario <span class="fecha">(2021)</span></p>
-  `;
+  const items = Array.isArray(data.items) ? data.items : [];
+  section.innerHTML = `<h2>${data.titulo || 'Certificaciones'}</h2>`;
+
+  if (items.length) {
+    const ul = document.createElement('ul');
+    items.forEach(it => {
+      const li = document.createElement('li');
+      li.textContent = it;
+      ul.appendChild(li);
+    });
+    section.appendChild(ul);
+  }
+
   return section;
 }

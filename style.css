@@ -1,106 +1,116 @@
 /* === BASE === */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #fff;
-  color: #111;
-  line-height: 1.6;
-  padding: 2rem;
-  max-width: 900px;
-  margin: auto;
+:root{
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #666666;
+  --accent: #c1121f; /* rojo/cranberry */
+  --card: #f8f8f8;
+  --radius: 10px;
 }
 
-/* === ENCABEZADO === */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 24px;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Header */
 header {
   display: flex;
   align-items: center;
+  gap: 18px;
   justify-content: space-between;
-  border-bottom: 2px solid #ccc;
-  padding-bottom: 1rem;
-  margin-bottom: 2rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 18px;
+  margin-bottom: 22px;
+}
+
+header .left {
+  flex: 1;
 }
 
 .foto {
   width: 120px;
   height: 120px;
-  border-radius: 50%;
+  border-radius: 16px;
   object-fit: cover;
+  background: linear-gradient(135deg,#eee,#ddd);
+  flex-shrink: 0;
+  border-radius: 12px;
 }
 
-/* === TIPOGRAFÍA === */
-h1, h2, h3 {
-  margin: 0;
-  color: #000;
+/* Titulos */
+h1 { margin: 0; font-size: 1.6rem; }
+h2 { margin: 0 0 8px 0; font-size: 1.1rem; color: var(--text); }
+h3 { margin: 0; font-size: 1rem; color: var(--muted); }
+
+/* info */
+.info { font-size: 0.92rem; color: var(--muted); margin-top: 6px; }
+.info a { color: var(--accent); text-decoration: none; }
+.info a:hover { text-decoration: underline; }
+
+/* Section cards */
+section {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.03);
 }
 
-h2 {
-  margin-top: 2rem;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 0.5rem;
+/* Proyecto list */
+.proyecto {
+  padding: 12px;
+  border-radius: 8px;
+  background: white;
+  margin-bottom: 10px;
+  border: 1px solid #efefef;
+}
+.proyecto .meta { display:flex; gap:8px; align-items:baseline; flex-wrap:wrap; }
+.nombre { font-weight:700; color:var(--accent); }
+.stack { font-size:0.9rem; color:var(--muted); }
+.descripcion { margin-top:8px; color:#222; font-size:0.95rem; }
+
+/* list styles */
+ul { margin: 8px 0 0 1.1rem; padding: 0; }
+.lugar { font-style: italic; color: var(--muted); }
+.fecha { font-size: 0.9rem; color: #999; }
+
+/* Idioma selector */
+.lang-select {
+  display:flex;
+  gap:8px;
+  align-items:center;
+  margin-bottom: 14px;
+}
+.lang-select button {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+  background: transparent;
+  cursor:pointer;
+  font-weight:600;
+}
+.lang-select button.active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
 }
 
-a {
-  color: crimson;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* === LISTAS Y TEXTO === */
-ul {
-  margin: 0;
-  padding-left: 1.2rem;
-}
-
-.info {
-  font-size: 0.9rem;
-  color: #444;
-}
-
-.cargo {
-  color: crimson;
-  font-weight: bold;
-}
-
-.lugar {
-  font-style: italic;
-  color: #666;
-}
-
-.fecha {
-  font-size: 0.9rem;
-  color: #999;
-}
-
-/* === TABS DINÁMICOS === */
-.tabs {
-  display: flex;
-  gap: 1rem;
-  margin: 20px 0;
-}
-
-.tabs button {
-  padding: 10px 20px;
-  font-weight: bold;
-  border: 2px solid #ccc;
-  background-color: #f9f9f9;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
-  color: #111;
-}
-
-.tabs button:hover {
-  background-color: #eee;
-  border-color: crimson;
-  color: crimson;
-}
-
-/* === CONTENEDOR DE SECCIÓN CAMBIANTE === */
-#tab-content {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+/* responsive */
+@media (max-width:720px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .foto { width: 96px; height: 96px; }
 }
