@@ -30,13 +30,14 @@ export const translations = {
           stack: "Python FastAPI, Next.js, Ollama +12 herramientas especializadas por fase",
           queEs: "Orquestador automatizado de auditorías de ciberseguridad ofensiva/defensiva con IA. Plataforma completa con pipeline de 5 fases, biblioteca inteligente de exploits con autocorrección y dashboard web en tiempo real.",
           funciones: "Orquesta auditorías de seguridad automatizadas con su propia inteligencia artificial especializada, que se autoentrena con cada auditoría realizada para mejorar sus exploits. Genera, ejecuta y corrige automáticamente scripts de prueba según los hallazgos de cada blanco. Escanea infraestructura web, descubre puntos débiles, evade protecciones y produce reportes profesionales, todo desde un panel con chat IA integrado.",
-          screenshots: ["/assets/fraser-whatsapp-1.jpeg", "/assets/fraser-whatsapp-2.jpeg"]
+          screenshots: ["/assets/fraser-whatsapp-1.jpeg", "/assets/fraser-whatsapp-2.jpeg", "/assets/fraser-3.png"]
         },
         {
           nombre: "CENTINELA",
           stack: "Go 1.26, dashboard web embebido",
           queEs: "Escáner de seguridad para Windows en un solo binario Go de ~8 MB. Seis módulos de escaneo con motor de detección centralizado y dashboard web embebido.",
-          funciones: "Escanea procesos, red, archivos, persistencia, logs y memoria en busca de actividad sospechosa: herramientas de hacking, PowerShell ofuscado, conexiones C2, persistencia en registro/tareas/servicios, fuerza bruta, scripts maliciosos y parcheo AMSI. Dashboard web con hallazgos, alertas, progreso en vivo, reportes HTML/JSON, reglas YAML y API REST."
+          funciones: "Escanea procesos, red, archivos, persistencia, logs y memoria en busca de actividad sospechosa: herramientas de hacking, PowerShell ofuscado, conexiones C2, persistencia en registro/tareas/servicios, fuerza bruta, scripts maliciosos y parcheo AMSI. Dashboard web con hallazgos, alertas, progreso en vivo, reportes HTML/JSON, reglas YAML y API REST.",
+          screenshots: ["/assets/centinela-1.png", "/assets/centinela-2.png", "/assets/centinela-3.png", "/assets/centinela-4.png"]
         },
         {
           nombre: "TU SILLITA",
@@ -144,13 +145,14 @@ export const translations = {
           stack: "Python FastAPI, Next.js, Ollama +12 ferramentas especializadas por fase",
           queEs: "Orquestador automatizado de auditorias de cibersegurança ofensiva/defensiva com IA. Plataforma completa com pipeline de 5 fases, biblioteca inteligente de exploits com autocorreção e dashboard web em tempo real.",
           funciones: "Orquestra auditorias de segurança automatizadas com sua própria inteligência artificial especializada, que se autotreina com cada auditoria realizada para melhorar seus exploits. Gera, executa e corrige automaticamente scripts de teste conforme os achados de cada alvo. Escaneia infraestrutura web, descobre pontos frágeis, evade proteções e produz relatórios profissionais, tudo a partir de um painel com chat IA integrado.",
-          screenshots: ["/assets/fraser-whatsapp-1.jpeg", "/assets/fraser-whatsapp-2.jpeg"]
+          screenshots: ["/assets/fraser-whatsapp-1.jpeg", "/assets/fraser-whatsapp-2.jpeg", "/assets/fraser-3.png"]
         },
         {
           nombre: "CENTINELA",
           stack: "Go 1.26, dashboard web embutido",
           queEs: "Escâner de segurança para Windows em um único binário Go de ~8 MB. Seis módulos de escaneamento com motor de detecção centralizado e dashboard web embutido.",
-          funciones: "Escaneia processos, rede, arquivos, persistência, logs e memória em busca de atividade suspeita: ferramentas de hacking, PowerShell ofuscado, conexões C2, persistência em registro/tarefas/serviços, força bruta, scripts maliciosos e patch AMSI. Dashboard web com descobertas, alertas, progresso ao vivo, relatórios HTML/JSON, regras YAML e API REST."
+          funciones: "Escaneia processos, rede, arquivos, persistência, logs e memória em busca de atividade suspeita: ferramentas de hacking, PowerShell ofuscado, conexões C2, persistência em registro/tarefas/serviços, força bruta, scripts maliciosos e patch AMSI. Dashboard web com descobertas, alertas, progresso ao vivo, relatórios HTML/JSON, regras YAML e API REST.",
+          screenshots: ["/assets/centinela-1.png", "/assets/centinela-2.png", "/assets/centinela-3.png", "/assets/centinela-4.png"]
         },
         {
           nombre: "TU SILLITA",
@@ -257,13 +259,14 @@ export const translations = {
           stack: "Python FastAPI, Next.js, Ollama +12 specialized tools per phase",
           queEs: "Automated offensive/defensive cybersecurity audit orchestrator with AI. Complete platform with 5-phase pipeline, intelligent exploit library with auto-correction and real-time web dashboard.",
           funciones: "Orchestrates automated security audits with its own specialized artificial intelligence that self-trains on every audit to improve its exploits. Generates, executes and auto-corrects test scripts based on each target's findings. Scans web infrastructure, discovers weak points, evades protections and produces professional reports, all from a dashboard with integrated AI chat.",
-          screenshots: ["/assets/fraser-whatsapp-1.jpeg", "/assets/fraser-whatsapp-2.jpeg"]
+          screenshots: ["/assets/fraser-whatsapp-1.jpeg", "/assets/fraser-whatsapp-2.jpeg", "/assets/fraser-3.png"]
         },
         {
           nombre: "CENTINELA",
           stack: "Go 1.26, embedded web dashboard",
           queEs: "Windows security scanner packaged as a single ~8 MB Go binary. Six scanning modules with centralized detection engine and embedded web dashboard.",
-          funciones: "Scans processes, network, files, persistence, logs and memory for suspicious activity: hacking tools, obfuscated PowerShell, C2 connections, registry/task/service persistence, brute force, malicious scripts and AMSI patching. Web dashboard with findings, alerts, live progress, HTML/JSON reports, YAML rules and REST API."
+          funciones: "Scans processes, network, files, persistence, logs and memory for suspicious activity: hacking tools, obfuscated PowerShell, C2 connections, registry/task/service persistence, brute force, malicious scripts and AMSI patching. Web dashboard with findings, alerts, live progress, HTML/JSON reports, YAML rules and REST API.",
+          screenshots: ["/assets/centinela-1.png", "/assets/centinela-2.png", "/assets/centinela-3.png", "/assets/centinela-4.png"]
         },
         {
           nombre: "TU SILLITA",
