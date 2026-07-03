@@ -8,14 +8,37 @@ import { translations } from './translations.js';
 
 const app = document.getElementById('app');
 
-// Estado simple
-let lang = localStorage.getItem('lang') || 'es';
+function langFromPath() {
+  const match = window.location.pathname.match(/^\/(es|pt|en)\/?$/);
+  return match ? match[1] : null;
+}
 
-// Contenedor donde renderizamos todo
+let lang = langFromPath() || localStorage.getItem('lang') || 'es';
+
+function updateURL(l) {
+  const base = window.location.origin + window.location.pathname.replace(/^\/(es|pt|en)\/?/, '');
+  const newPath = '/' + l + '/';
+  window.history.pushState({ lang: l }, '', newPath);
+}
+
+function updateMeta(l) {
+  document.documentElement.lang = l;
+  const titles = { es: 'Fernando Lucas Picco — Portfolio CV', pt: 'Fernando Lucas Picco — Portfólio CV', en: 'Fernando Lucas Picco — Portfolio CV' };
+  const descs = {
+    es: 'Full-stack developer &amp; founder en ARCADE ESTUDIO. Sistemas, productos y ciberseguridad.',
+    pt: 'Desenvolvedor full-stack &amp; founder na ARCADE ESTUDIO. Sistemas, produtos e cibersegurança.',
+    en: 'Full-stack developer &amp; founder at ARCADE ESTUDIO. Systems, products and cybersecurity.'
+  };
+  document.title = titles[l];
+  document.querySelector('meta[property="og:title"]')?.setAttribute('content', titles[l]);
+  document.querySelector('meta[name="twitter:title"]')?.setAttribute('content', titles[l]);
+  document.querySelector('meta[property="og:description"]')?.setAttribute('content', descs[l]);
+  document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', descs[l]);
+}
+
 function renderApp() {
   app.innerHTML = '';
 
-  // LANG SELECTOR
   const langWrapper = document.createElement('div');
   langWrapper.className = 'lang-select';
   const label = document.createElement('div');
@@ -31,21 +54,34 @@ function renderApp() {
       if (lang === code) return;
       lang = code;
       localStorage.setItem('lang', lang);
-      renderApp(); // re-render
+      updateURL(lang);
+      updateMeta(lang);
+      renderApp();
     });
     langWrapper.appendChild(btn);
   });
 
   app.appendChild(langWrapper);
 
-  // Header + sections
   app.appendChild(Header(translations[lang].header));
   app.appendChild(Perfil(translations[lang].perfil));
   app.appendChild(Desarrollo(translations[lang].desarrollo));
   app.appendChild(Educacion(translations[lang].educacion));
-  
   app.appendChild(Idiomas(translations[lang].idiomas));
 }
 
-// inicial
+if (!langFromPath()) {
+  updateURL(lang);
+}
+updateMeta(lang);
 renderApp();
+
+window.addEventListener('popstate', () => {
+  const l = langFromPath();
+  if (l && l !== lang) {
+    lang = l;
+    localStorage.setItem('lang', lang);
+    updateMeta(lang);
+    renderApp();
+  }
+});

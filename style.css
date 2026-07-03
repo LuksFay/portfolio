@@ -68,16 +68,46 @@ section {
 
 /* Proyecto list */
 .proyecto {
-  padding: 12px;
-  border-radius: 8px;
+  padding: 16px;
+  border-radius: 10px;
   background: white;
-  margin-bottom: 10px;
-  border: 1px solid #efefef;
+  margin-bottom: 14px;
+  border: 1px solid #e8e8e8;
 }
-.proyecto .meta { display:flex; gap:8px; align-items:baseline; flex-wrap:wrap; }
-.nombre { font-weight:700; color:var(--accent); }
-.stack { font-size:0.9rem; color:var(--muted); }
-.descripcion { margin-top:8px; color:#222; font-size:0.95rem; }
+.proyecto-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+.nombre { font-weight: 700; color: var(--accent); font-size: 1.05rem; }
+.stack { font-size: 0.85rem; color: var(--muted); }
+.proyecto-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.proyecto-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.proyecto-item .label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--muted);
+}
+.proyecto-item span:last-child {
+  font-size: 0.95rem;
+  color: #222;
+  line-height: 1.5;
+}
 
 /* list styles */
 ul { margin: 8px 0 0 1.1rem; padding: 0; }
@@ -114,3 +144,56 @@ ul { margin: 8px 0 0 1.1rem; padding: 0; }
   }
   .foto { width: 96px; height: 96px; }
 }
+
+/* Screenshots */
+.proyecto-screenshots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #f0f0f0;
+}
+.ss-thumb {
+  width: 100px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1px solid #e0e0e0;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.ss-thumb:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* Lightbox */
+.ss-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  cursor: zoom-out;
+}
+.ss-full {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 8px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+}
+.ss-close {
+  position: fixed;
+  top: 20px;
+  right: 28px;
+  font-size: 2.4rem;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.15s;
+  line-height: 1;
+}
+.ss-close:hover { opacity: 1; }

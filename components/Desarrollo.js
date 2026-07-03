@@ -1,8 +1,7 @@
 export default function Desarrollo(data = {}) {
-  // data: { titulo, proyectos: [{ nombre, stack, descripcion }] }
   const section = document.createElement('section');
-
   const title = data.titulo || 'Experiencia en Desarrollo Web';
+  const labels = data.labels || { queEs: 'Qué es', funciones: 'Funciones' };
   const proyectos = Array.isArray(data.proyectos) ? data.proyectos : [];
 
   const container = document.createElement('div');
@@ -12,20 +11,42 @@ export default function Desarrollo(data = {}) {
     const box = document.createElement('div');
     box.className = 'proyecto';
 
-    // estructura interna
+    const imgs = Array.isArray(p.screenshots) ? p.screenshots : [];
+
     box.innerHTML = `
-      <div class="meta">
+      <div class="proyecto-header">
         <div class="nombre">${p.nombre}</div>
-        <div class="stack">${p.stack ? ' • ' + p.stack : ''}</div>
+        <div class="stack">${p.stack || ''}</div>
       </div>
-      <div class="descripcion">${p.descripcion || ''}</div>
+      <div class="proyecto-body">
+        <div class="proyecto-item">
+          <span class="label">${labels.queEs}</span>
+          <span>${p.queEs || ''}</span>
+        </div>
+        <div class="proyecto-item">
+          <span class="label">${labels.funciones}</span>
+          <span>${p.funciones || ''}</span>
+        </div>
+      </div>
+      ${imgs.length ? `<div class="proyecto-screenshots">${imgs.map(src => `<img src="${src}" class="ss-thumb" loading="lazy">`).join('')}</div>` : ''}
     `;
+
+    if (imgs.length) {
+      const thumbs = box.querySelectorAll('.ss-thumb');
+      thumbs.forEach(img => {
+        img.addEventListener('click', () => {
+          const overlay = document.createElement('div');
+          overlay.className = 'ss-overlay';
+          overlay.innerHTML = `<img src="${img.src}" class="ss-full"><span class="ss-close">&times;</span>`;
+          overlay.querySelector('.ss-close').addEventListener('click', () => overlay.remove());
+          overlay.addEventListener('click', e => { if (e.target === overlay) overlay.remove(); });
+          document.body.appendChild(overlay);
+        });
+      });
+    }
 
     container.appendChild(box);
   });
-
-  // Si querés añadir links a repos, agrega p.repo en translations y aquí hacé:
-  // if (p.repo) { ... crear <a> ... }
 
   section.appendChild(container);
   return section;

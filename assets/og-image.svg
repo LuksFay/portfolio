@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#1a1a1a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF4500"/>
+      <stop offset="100%" stop-color="#FF6B35"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="0" y="0" width="6" height="630" fill="url(#accent)"/>
+  <text x="60" y="160" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="800" fill="#ffffff">Fernando Lucas Picco</text>
+  <text x="60" y="220" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="#888888">Full-stack Developer &amp; Founder</text>
+  <rect x="60" y="260" width="80" height="4" rx="2" fill="#FF4500"/>
+  <text x="60" y="320" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#aaaaaa">Sistemas · Productos · Ciberseguridad</text>
+  <text x="60" y="360" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#aaaaaa">ARCADE ESTUDIO</text>
+  <rect x="880" y="440" width="260" height="130" rx="12" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="900" y="480" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#666666">SKILLS</text>
+  <text x="900" y="510" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#cccccc">React · Next.js · Python · Go</text>
+  <text x="900" y="535" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#cccccc">PHP · Firebase · AI · Security</text>
+  <text x="900" y="560" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#cccccc">FastAPI · Three.js · SQL</text>
+  <circle cx="110" cy="540" r="6" fill="#FF4500"/>
+  <circle cx="110" cy="565" r="6" fill="#FF4500" opacity="0.5"/>
+</svg>

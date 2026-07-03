@@ -11,7 +11,7 @@ export default function Header(data = {}) {
         ${data.linkedin ? `<a href="${data.linkedin}" target="_blank" rel="noopener">LinkedIn</a>` : ''}
       </div>
     </div>
-    <img src="assets/foto.jpg" alt="Foto de perfil" class="foto">
+    <img src="/assets/foto.jpg" alt="Foto de perfil" class="foto">
   `;
 
   return header;
